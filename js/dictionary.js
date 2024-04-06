@@ -7,7 +7,7 @@ function search() {
         .then(response => response.json())
         .then(data => {
             if (data.title === "No Definitions ") {
-                results.innerHTML = "<li>No results found</li>";
+                results.innerHTML = "<li>No matches discovered</li>";
             } else {
                 let count = 1;
                 data.forEach(entry => {
@@ -20,7 +20,7 @@ function search() {
                     }
                 });
                 if (count === 1) {
-                    results.innerHTML = "<li>No exact match found</li>";
+                    results.innerHTML = "<li>No precise match found</li>";
                 }
             }
         });
